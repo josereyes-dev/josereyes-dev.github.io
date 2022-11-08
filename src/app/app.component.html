@@ -1,21 +1,26 @@
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+<script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+
 <div class="header">
   <nav class="menu-nav">
     <h1>Jose Luis Reyes</h1>
-
     <div class="menu" id="mimenu">
     <ul>
       <li><a href="#">Inicio</a></li>
       <li><a href="#">Menu</a></li>
-        <li><a href="#">contacto</a></li>
+      <li><a href="#">contacto</a></li>
     </ul>
+
+    <div class="hide">
+      <i class="fa fa-bars" aria-hidden="true"></i> Menu
+  </div>
+
   </div>
   </nav>
 </div>
 
-<div class="container">
-  <p class="acerca">
-  </p>
-  <a href="#">
-    <img src="../assets/linkedin.png" alt="www.linkedin.com">
-  </a>
-</div>
+  <script>
+    $(".hide").on('click', function() {
+      $(".menu-nav").toggle('slow');
+    })
+  </script>
