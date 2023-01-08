@@ -1,77 +1,83 @@
-.menu-nav h1 {
-    font-family: Impact, Charcoal, sans-serif;
-    font-size: 24px;
-    letter-spacing: 0px;
-    padding-left: 2.5rem;
-    word-spacing: 2px;
-    color: #fff;    
-    font-weight: 400;
-    -webkit-background-clip: text;
-    background-clip: text;
+
+.menu{
+position: absolute;
+top: 0;
+left: 0;
+width: 100%;
+height: 80px;
+background-color: black;
+padding: 20px 40px;
+display: flex;
+justify-content: space-between;
+align-items: center;
 }
 
-.menu-nav{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    text-align: center;
-    background-color: rgb(24 24 27);
-    opacity: 1;
+.logo{
+  color: #fff;
+  text-decoration: none;
+  font-size: 1.5em;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+}
+.main-menu{
+  display: flex;
+  gap: 30px;
 }
 
-.menu-nav ul{
-    list-style-type: none;
-    margin: 0.5em auto;
-    text-align: center;
-    padding-right: 1.5rem;
+.main-menu-item a{
+  position: relative;
+  text-decoration: none;
+  color: #fff;
+  font-size: 1em;
+  color: #fff;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
 }
 
-.menu-nav ul li{
-    display: inline;
-    margin-right:30px;
+.main-menu li a::before{
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  width: 100%;
+  height: 2px;
+  background: #fff;
+  transform: scaleX(0);
+  transition: transform 0.5s ease-in-out;
+  transform-origin: right;
 }
 
-.menu-nav ul li a{
-    text-decoration: none;
-    font-family: Arial, Helvetica, sans-serif;
-    color: #fff;
-    padding: 0.5em;
-    box-shadow: inset 0 0 0 0 #fff;
-    transition: color .3s ease-in-out, box-shadow .3s ease-in-out;
-    border-radius: 0.500rem;
+.main-menu li a:hover::before{
+  transform: scaleX(1);
+  transform-origin: left;
 }
 
-.menu-nav ul li a:hover{
-    box-shadow: inset  125px 0px 0px 0px #fff;
-    color: #000;
+.menu-Toggle{
+  position: relative;
+  display: none;
+}
+.menu-Toggle{
+  position: relative;
+  display: none;
 }
 
-.menu-nav ul a:active{
-    padding: 1.5em;
-}
 
-.hide{
-    font-size: 22px;
-    color: #fff;
-    padding: 16px;
-    background-color: rgb(24 24 27);
-    opacity: 1;
+
+@media (max-width: 800px) {
+
+  .menu-Toggle{
+    position: absolute;
+    display: block;
+    font-size: 2em;
     cursor: pointer;
-    display: none;
+    transform: translateX(30px);
+    z-index: 0;
+  }
+
+  .main-menu{
+    position: absolute;
+    opacity: 0;
+    visibility: hidden;
+    left: 100%;
+  }
 }
-
-@media (max-width: 768px){
-    .menu ul li{
-        width: 100%;
-        padding: 16px;
-        text-align: right;
-    }
-
-    .hide{
-        display: block;
-        }
-
-    .menu ul{
-    display: none;
-    }
-    }

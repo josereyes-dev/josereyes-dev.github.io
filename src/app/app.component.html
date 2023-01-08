@@ -1,26 +1,25 @@
-<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-<script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
-
 <div class="header">
-  <nav class="menu-nav">
-    <h1>Jose Luis Reyes</h1>
-    <div class="menu" id="mimenu">
-    <ul>
-      <li><a href="#">Inicio</a></li>
-      <li><a href="#">Menu</a></li>
-      <li><a href="#">contacto</a></li>
-    </ul>
-
-    <div class="hide">
-      <i class="fa fa-bars" aria-hidden="true"></i> Menu
-  </div>
-
-  </div>
+  <nav class="nav">
+    <div class="menu">
+      <a href="#" class="logo">Reyes</a>
+      <ul id="main-menu" class="main-menu">
+        <li class="main-menu-item">
+          <a href="#">Home</a>
+        </li>
+        <li class="main-menu-item">
+          <a href="#">About</a>
+        </li>
+        <li class="main-menu-item">
+          <a href="#">Resume</a>
+        </li>
+        <li class="main-menu-item">
+          <a href="#">Portafolio</a>
+        </li>
+       </ul>
+       <div class="menu-Toggle">
+        <img src="../assets/menu.png" alt="icono de menu">
+       </div>
+    </div>
+    
   </nav>
 </div>
-
-  <script>
-    $(".hide").on('click', function() {
-      $(".menu-nav").toggle('slow');
-    })
-  </script>
