@@ -2,24 +2,34 @@
   <nav class="nav">
     <div class="menu">
       <a href="#" class="logo">Reyes</a>
-      <ul id="main-menu" class="main-menu">
-        <li class="main-menu-item">
+      <ul id="main_menu" class="main_menu">
+        <li>
           <a href="#">Home</a>
         </li>
-        <li class="main-menu-item">
+        <li>
           <a href="#">About</a>
         </li>
-        <li class="main-menu-item">
+        <li>
           <a href="#">Resume</a>
         </li>
-        <li class="main-menu-item">
+        <li>
           <a href="#">Portafolio</a>
         </li>
        </ul>
-       <div class="menu-Toggle">
+       <div class="menu_Toggle">
         <img src="../assets/menu.png" alt="icono de menu">
-       </div>
+      </div> 
     </div>
-    
+      
   </nav>
 </div>
+
+<script>
+  let main_menu = document.querySelector('.main-menu');
+  let menu_Toggle = document.querySelector('.menu_Toggle')
+  let header = document.querySelector('.header');
+
+  menu_Toggle.onclick = function(){
+    main_menu.classList.toggle('open');
+  } 
+</script>
