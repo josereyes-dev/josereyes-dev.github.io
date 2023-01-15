@@ -84,7 +84,7 @@ a{
 
     .nav-menu{
         position: fixed;
-        left: -100%;
+        left: 100%;
         top: 70px;
         gap: 0;
         flex-direction: column;
@@ -102,3 +102,64 @@ a{
         left: 0;
     }
 }
+
+    .personal{
+        display: flex;
+    align-items: center;
+    
+    }
+    .descripcion{
+        width: 45%;
+        height: 60%;
+        position: absolute;
+        bottom: 0;
+        left: 40px;
+        text-align: center;
+    }
+
+    .name, .lastname{
+        text-transform: uppercase;
+        font-size: 6.5em;
+        line-height: 80px;
+    }
+    
+    .developer{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+    }
+    .profession{
+        box-sizing: border-box;
+        font-size: 1.6rem;
+        font-family: monospace;
+        color: var(--text);
+        width: 30ch;
+        animation: profession 5s steps(30),
+        pampalluga 0.5s step-end infinite 
+        alternate;
+        white-space: nowrap;
+        overflow: hidden;
+        border-right: 2px solid var(--text);
+    }
+
+    @keyframes profession{
+        from {
+            width: 0;
+        }
+    }
+
+    @keyframes pampalluga{
+        50%{
+            border-color: transparent;
+        }
+    }
+    .setup{
+        width: 45%;
+        height: 80%;
+        position: absolute;
+        bottom: 0;
+        right: 40px;
+    }
+    .setup img{
+        width: 100%;
+    }
