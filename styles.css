@@ -71,6 +71,7 @@ a{
     justify-content: center;
     align-content: center;
     align-items: center;
+    text-align: center;
 }
 
 
@@ -80,6 +81,7 @@ a{
         line-height: 80px;
     }
     
+
     img{
         width: 48vw;
     }
