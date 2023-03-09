@@ -35,6 +35,8 @@ a{
     gap: 60px;
 }
 
+
+
 .nav-branding{
     color: #555;
       font-size: 1.5em;
@@ -45,6 +47,7 @@ a{
 
 .nav-link{
     transition: 0.7s ease;
+    
 }
 
 .nav-link:hover{
@@ -83,7 +86,8 @@ a{
     
 
     img{
-        width: 100%;
+        padding: 10px;
+        width: 50vw;
         height: auto;
 }
 
@@ -167,6 +171,7 @@ a{
         .nav-item{
             margin: 16px 0;
         }
+
     
         .nav-menu.activate{
             left: 0;
