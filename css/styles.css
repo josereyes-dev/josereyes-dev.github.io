@@ -8,19 +8,10 @@
 }
 
 .header {
+    top: 0px;
     position: fixed;
     width: 100%;
     background-color: #000;
-}
-
-.nav-item {
-    list-style: none;
-}
-
-.nav-link {
-    text-decoration: none;
-    text-transform: uppercase;
-    color: #fff;
 }
 
 .navbar {
@@ -29,13 +20,6 @@
     justify-content: space-between;
     align-items: center;
     padding: 20px 40px;
-}
-
-.nav-menu {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    gap: 60px;
 }
 
 .nav-branding {
@@ -47,7 +31,21 @@
     text-decoration: none;
 }
 
+.nav-menu {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 60px;
+}
+
+.nav-item {
+    list-style: none;
+}
+
 .nav-link {
+    text-decoration: none;
+    text-transform: uppercase;
+    color: #fff;
     transition: 0.7s ease;
 }
 
@@ -70,26 +68,23 @@
     background-color: white;
 }
 
-.personal {
-    padding: 90px 25px 25px;
-}
-
-.about {
-    padding: 10px 75px;
-}
-
-.resume{
-    padding: 50px 75px;
-}
-
 .personal,
-.about, .resume {
+.about,
+.resume {
     padding: auto;
     display: flex;
     justify-content: center;
     align-content: center;
     align-items: center;
     text-align: center;
+}
+
+.personal {
+    color: #fff;
+    padding: 90px 25px 25px;
+    background-image: url('/img/setup.jpg');
+    background-size: cover; /* opcional */
+    background-position: center center; /* opcional */
 }
 
 .descripcion {
@@ -103,6 +98,24 @@
     line-height: 80px;
 }
 
+.developer {
+    display: flex;
+    justify-content: center;
+}
+
+.profession {
+    box-sizing: border-box;
+    font-size: 1.6rem;
+    font-family: monospace;
+    color: var(--text);
+    width: 20ch;
+    animation: profession 5s steps(30),
+        pampalluga 0.5s step-end infinite alternate;
+    white-space: nowrap;
+    overflow: hidden;
+    border-right: 2px solid var(--text);
+}
+
 img {
     padding: 10px;
     width: 50vw;
@@ -110,20 +123,27 @@ img {
     border-radius: 15px;
 }
 
-.profile-photo img {
-    padding: 10px;
-    width: 30vw;
-    height: auto;
-}
-
-.developer {
-    display: flex;
-    justify-content: center;
+.about {
+    flex-direction: column;
+    padding: 10px 75px;
 }
 
 .about-me {
     text-align: center;
     font-weight: 700;
+}
+
+.presentacion{
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+}
+
+.profile-photo img {
+    padding: 10px;
+    width: 30vw;
+    height: auto;
 }
 
 .about p {
@@ -153,63 +173,64 @@ img {
     background-color: #3c4f76;
 }
 
-.menu-lateral{
+.resume {
+    align-items: flex-start;
+    padding: 50px 75px;
+}
+
+.container-resume {
+    padding: 25px 30px;
+    text-align: justify;
+}
+
+.content-resume {
+    padding: 25px 40px;
+    text-align: justify;
+}
+
+.menu-lateral {
     color: #000;
     display: flex;
     text-align: justify;
 }
 
-.lat-link{
+.lat-link {
     list-style: none;
     margin-bottom: 10px;
 }
 
-.lat-link:hover{
+.lat-link:hover {
     text-decoration: underline;
 }
 
-.menu-link{
+.menu-link {
     text-decoration: none;
     text-transform: uppercase;
     color: #000;
 }
 
-.container-resume{
-    padding: 25px 30px;
-    text-align: justify;
-}
-
-.content-resume{
-    padding: 25px 40px;
-    text-align: justify;
-}
-
-.title{
+.title {
     font-weight: 800;
     font-size: 30px;
     margin-bottom: 30px;
     color: #7796CB;
 }
 
-.date{
+.date {
     font-weight: 700;
     font-size: 16px;
     color: #7796CB;
 }
 
-h2{
+h2 {
     font-size: 24px;
     font-weight: 700;
 }
 
-.university{
+.university {
     font-size: 18px;
     font-weight: 700;
 }
-
-
-
-
 
 @media(max-width: 768px) {
 
@@ -218,7 +239,8 @@ h2{
     }
 
     .personal,
-    .about, .resume {
+    .about,
+    .resume, .presentacion {
         flex-direction: column;
         text-align: center;
         justify-content: center;
@@ -235,19 +257,6 @@ h2{
 
 }
 
-.profession {
-    box-sizing: border-box;
-    font-size: 1.6rem;
-    font-family: monospace;
-    color: var(--text);
-    width: 20ch;
-    animation: profession 5s steps(30),
-        pampalluga 0.5s step-end infinite alternate;
-    white-space: nowrap;
-    overflow: hidden;
-    border-right: 2px solid var(--text);
-}
-
 @keyframes profession {
     from {
         width: 0;
@@ -259,8 +268,6 @@ h2{
         border-color: transparent;
     }
 }
-
-
 
 @media (max-width: 768px) {
     .hamburger {
@@ -302,12 +309,9 @@ h2{
         margin: 16px 0px;
     }
 
-
     .nav-menu.activate {
         left: 0;
         right: 0;
         top: 70px;
     }
-
-
 }
