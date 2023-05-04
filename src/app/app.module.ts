@@ -1,6 +1,8 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-
+// inicio servicio script
+import { CargarscriptsService } from './cargarscripts.service';
+//fin servicio  
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 
@@ -12,7 +14,8 @@ import { AppComponent } from './app.component';
     BrowserModule,
     AppRoutingModule
   ],
-  providers: [],
+  providers: [CargarscriptsService],
   bootstrap: [AppComponent]
+  
 })
 export class AppModule { }
