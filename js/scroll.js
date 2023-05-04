@@ -18,6 +18,3 @@ links.forEach(link => {
       });
     });
   });
-
-
-

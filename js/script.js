@@ -12,6 +12,4 @@ document.querySelector(".nav-link").forEeach(n => n.addEventListener("clic", () 
     navMenu.classList.remove("activate");
 
 }))
-
-
   
