@@ -191,7 +191,7 @@ body {
 
         .encabezado {
             display: flex;
-            align-items: center;
+            justify-content: center;
             color: #508AA8;
             font-weight: 800;
             font-size: 30px;
@@ -208,6 +208,7 @@ body {
         .front {
 
             .lenguajes {
+                justify-content: center;
                 display: flex;
                 flex-wrap: wrap;
                 list-style: none;
@@ -265,7 +266,7 @@ body {
     }
 }
 
-@media (max-width: 640px) {
+@media (max-width: 768px) {
     .hamburger {
         display: block;
     }
@@ -311,46 +312,56 @@ body {
         top: 70px;
     }
 
-    .presentacion,
-    .about, .resume {
-        padding: 1rem;
-        flex-direction: column;
-        text-align: center;
-        justify-content: center;
-    }
-
-    .about {
-        .presentacion {
-            .profile-photo{
-                padding: 1rem;
-                img{
-                    width: 60%;
-                }
-            }
-            .profile {
-                    padding: 0;
-            }
-        }
-
-    }
-
-    .resume {     
-        .page{
-            .encabezado{
+    .resume {
+        .page {
+            .encabezado {
                 justify-content: center;
             }
-            .front{
-                .lenguajes{
+
+            .front {
+                .lenguajes {
                     justify-content: center;
-                    
-                    .lenguaje{
+
+                    .lenguaje {
                         width: 40%;
                     }
                 }
             }
         }
-        img{
+
+        img {
             width: 50%;
         }
     }
+}
+    @media (max-width: 1000px) {
+
+        .presentacion,
+        .about,
+        .resume {
+            padding: 1rem;
+            flex-direction: column;
+            text-align: center;
+            justify-content: center;
+        }
+
+        .about {
+            .presentacion {
+                .profile-photo {
+                    padding: 1rem;
+
+                    img {
+                        width: 60%;
+                    }
+                }
+
+                .profile {
+                    padding: 0;
+                }
+            }
+
+        }
+    
+
+    
 }
