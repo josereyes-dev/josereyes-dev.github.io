@@ -134,6 +134,12 @@ body {
     align-content: center;
     align-items: center;
 
+    .profile {
+        text-align: justify;
+        padding: 2rem;
+        color: #111b21ca;
+    }
+
     .profile-photo img {
         padding: 10px;
         width: 30vw;
@@ -219,7 +225,7 @@ body {
                     cursor: pointer;
                     transition: transform 0.2s ease-in-out;
 
-                    .content-img{
+                    .content-img {
                         padding: 1rem 0;
                     }
 
@@ -237,7 +243,7 @@ body {
                     }
 
                 }
-                
+
                 .lenguaje:hover {
                     transform: translateY(-10px);
                 }
@@ -245,32 +251,6 @@ body {
             }
         }
     }
-}
-
-@media(max-width: 768px) {
-
-    .personal {
-        padding: 90px 25px 25px;
-    }
-
-    .personal,
-    .about,
-    .resume,
-    .presentacion {
-        flex-direction: column;
-        text-align: center;
-        justify-content: center;
-    }
-
-    .profile-photo img {
-        width: 50%;
-    }
-
-    img {
-        width: 100%;
-        height: auto;
-    }
-
 }
 
 @keyframes profession {
@@ -329,5 +309,36 @@ body {
         left: 0;
         right: 0;
         top: 70px;
+    }
+
+    .presentacion,
+    .about {
+        padding: 1rem;
+        flex-direction: column;
+        text-align: center;
+        justify-content: center;
+    }
+
+    .about {
+        .presentacion {
+            .profile-photo{
+                padding: 1rem;
+                img{
+                    width: 60%;
+                }
+            }
+            .profile {
+                    padding: 0;
+            }
+        }
+
+    }
+
+    .resume {
+        padding: 2rem;
+        
+        img{
+            width: 50%;
+        }
     }
 }

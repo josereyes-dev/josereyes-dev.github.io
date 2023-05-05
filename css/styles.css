@@ -118,6 +118,11 @@ body {
   align-content: center;
   align-items: center;
 }
+.presentacion .profile {
+  text-align: justify;
+  padding: 2rem;
+  color: rgba(17, 27, 33, 0.7921568627);
+}
 .presentacion .profile-photo img {
   padding: 10px;
   width: 30vw;
@@ -210,26 +215,6 @@ body {
   transform: translateY(-10px);
 }
 
-@media (max-width: 768px) {
-  .personal {
-    padding: 90px 25px 25px;
-  }
-  .personal,
-  .about,
-  .resume,
-  .presentacion {
-    flex-direction: column;
-    text-align: center;
-    justify-content: center;
-  }
-  .profile-photo img {
-    width: 50%;
-  }
-  img {
-    width: 100%;
-    height: auto;
-  }
-}
 @keyframes profession {
   from {
     width: 0;
@@ -277,6 +262,28 @@ body {
     left: 0;
     right: 0;
     top: 70px;
+  }
+  .presentacion,
+  .about {
+    padding: 1rem;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+  }
+  .about .presentacion .profile-photo {
+    padding: 1rem;
+  }
+  .about .presentacion .profile-photo img {
+    width: 60%;
+  }
+  .about .presentacion .profile {
+    padding: 0;
+  }
+  .resume {
+    padding: 2rem;
+  }
+  .resume img {
+    width: 50%;
   }
 }
 html {
