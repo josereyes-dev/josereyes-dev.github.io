@@ -264,7 +264,7 @@ body {
     top: 70px;
   }
   .presentacion,
-  .about {
+  .about, .resume {
     padding: 1rem;
     flex-direction: column;
     text-align: center;
@@ -279,8 +279,11 @@ body {
   .about .presentacion .profile {
     padding: 0;
   }
-  .resume {
-    padding: 2rem;
+  .resume .page .encabezado {
+    justify-content: center;
+  }
+  .resume .page .front .lenguajes {
+    justify-content: center;
   }
   .resume img {
     width: 50%;

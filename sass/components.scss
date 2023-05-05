@@ -312,7 +312,7 @@ body {
     }
 
     .presentacion,
-    .about {
+    .about, .resume {
         padding: 1rem;
         flex-direction: column;
         text-align: center;
@@ -334,9 +334,17 @@ body {
 
     }
 
-    .resume {
-        padding: 2rem;
-        
+    .resume {     
+        .page{
+            .encabezado{
+                justify-content: center;
+            }
+            .front{
+                .lenguajes{
+                    justify-content: center;
+                }
+            }
+        }
         img{
             width: 50%;
         }
