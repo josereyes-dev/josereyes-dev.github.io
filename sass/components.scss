@@ -47,8 +47,8 @@ body {
                 }
             }
         }
-        
-        
+
+
     }
 }
 
@@ -217,13 +217,18 @@ body {
                     text-align: center;
                     width: 200px;
                     cursor: pointer;
+                    transition: transform 0.2s ease-in-out;
 
-                    .conten-title {
-                        padding: 1rem;
+                    .content-img{
+                        padding: 1rem 0;
+                    }
+
+                    .content-title {
+                        padding: 0 1rem;
                     }
 
                     .content-name {
-                        padding: 1rem;
+                        padding: 0 0 1rem 0;
                     }
 
                     p {
@@ -232,6 +237,11 @@ body {
                     }
 
                 }
+                
+                .lenguaje:hover {
+                    transform: translateY(-10px);
+                }
+
             }
         }
     }
@@ -245,7 +255,8 @@ body {
 
     .personal,
     .about,
-    .resume, .presentacion {
+    .resume,
+    .presentacion {
         flex-direction: column;
         text-align: center;
         justify-content: center;
