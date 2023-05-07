@@ -1,6 +1,6 @@
 @use "components";
 
-html{
+html {
     scroll-behavior: smooth;
 }
 
@@ -10,4 +10,28 @@ html{
     font-size: 16px;
     font-family: 'Poppins', Arial, sans-serif;
 }
+a{
+    text-decoration: none;
+}
+.encabezado {
+    display: flex;
+    justify-content: center;
+    color: #508AA8;
+    font-weight: 800;
+    font-size: 40px;
+    padding-top: 20px;
+    margin-bottom: 20px;
+}
 
+.container-project {
+
+    .project {
+        padding: 2rem;
+        display: flex;
+        justify-content: space-evenly;
+
+        .idea {
+            background-color: #131316;
+        }
+    }
+}

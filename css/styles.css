@@ -22,7 +22,6 @@ body {
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 0.1rem;
-  text-decoration: none;
 }
 .header .navbar .nav-menu {
   display: flex;
@@ -35,7 +34,6 @@ body {
   list-style: none;
 }
 .header .navbar .nav-menu .nav-item .nav-link {
-  text-decoration: none;
   text-transform: uppercase;
   color: #fff;
   transition: 0.7s ease;
@@ -166,15 +164,6 @@ body {
 .resume .page br {
   margin-bottom: 20px;
 }
-.resume .page .encabezado {
-  display: flex;
-  justify-content: center;
-  color: #508AA8;
-  font-weight: 800;
-  font-size: 30px;
-  padding-top: 20px;
-  margin-bottom: 20px;
-}
 .resume .page .encabezado a {
   display: inline-flex;
   align-items: center;
@@ -216,6 +205,71 @@ body {
   transform: translateY(-10px);
 }
 
+.proyectos .container-project .project {
+  display: flex;
+  flex-direction: row;
+  padding: 5rem;
+}
+.proyectos .container-project .project .idea {
+  margin: 2rem;
+  width: 25rem;
+  cursor: pointer;
+}
+.proyectos .container-project .project .idea figure .principal {
+  width: 100%;
+}
+.proyectos .container-project .project .idea .info-project {
+  padding: 1rem;
+}
+.proyectos .container-project .project .idea .info-project h2 {
+  color: white;
+  font-size: 1.5rem;
+  padding: 0;
+}
+.proyectos .container-project .project .idea .info-project p {
+  color: white;
+}
+.proyectos .container-project .project .idea .info-project .programas {
+  display: flex;
+  justify-content: space-between;
+  padding: 0;
+}
+
+.contact {
+  padding: 5rem;
+  text-align: center;
+}
+.contact p {
+  font-size: 1.2rem;
+  line-height: 32px;
+  font-weight: 400;
+  color: #414141;
+}
+.contact .contenedor-canals {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.contact .contenedor-canals .canals {
+  display: flex;
+  padding: 0 1rem;
+  align-items: center;
+}
+.contact .contenedor-canals .canals .icon-canal i {
+  font-size: 2rem;
+  padding: 0 1rem;
+}
+.contact .contenedor-canals .canals h4 {
+  margin: 0;
+}
+.contact .contenedor-canals .canals a {
+  color: #000;
+  transition: 0.7s ease;
+}
+.contact .contenedor-canals .canals a:hover {
+  color: #717977;
+}
+
 @keyframes profession {
   from {
     width: 0;
@@ -242,7 +296,7 @@ body {
   .header {
     position: fixed;
     width: 100%;
-    z-index: 40;
+    z-index: 2;
   }
   .nav-menu {
     position: fixed;
@@ -254,7 +308,6 @@ body {
     width: 100%;
     text-align: center;
     transition: 0.5s all ease-out;
-    z-index: 40;
   }
   .nav-item {
     margin: 16px 0px;
@@ -280,7 +333,7 @@ body {
 @media (max-width: 1000px) {
   .presentacion,
   .about,
-  .resume {
+  .resume, .contact {
     padding: 1rem;
     flex-direction: column;
     text-align: center;
@@ -295,6 +348,17 @@ body {
   .about .presentacion .profile {
     padding: 0;
   }
+  .container-project .project {
+    align-items: center;
+    flex-wrap: wrap;
+    flex-direction: column;
+  }
+  .container-project .project .idea {
+    margin: 2rem;
+  }
+  .contenedor-canals {
+    flex-direction: column;
+  }
 }
 html {
   scroll-behavior: smooth;
@@ -305,6 +369,29 @@ html {
   margin: 0;
   font-size: 16px;
   font-family: "Poppins", Arial, sans-serif;
+}
+
+a {
+  text-decoration: none;
+}
+
+.encabezado {
+  display: flex;
+  justify-content: center;
+  color: #508AA8;
+  font-weight: 800;
+  font-size: 40px;
+  padding-top: 20px;
+  margin-bottom: 20px;
+}
+
+.container-project .project {
+  padding: 2rem;
+  display: flex;
+  justify-content: space-evenly;
+}
+.container-project .project .idea {
+  background-color: #131316;
 }
 
 /*# sourceMappingURL=styles.css.map */
