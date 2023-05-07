@@ -66,14 +66,15 @@ body {
     text-align: center;
     color: #676f8d;
     padding: 90px 25px 25px;
-    
+
     .descripcion {
         padding: 25px;
 
-        .name{
+        .name {
             text-transform: uppercase;
             font-size: 6.5em;
-            br{
+
+            br {
                 line-height: 80px;
             }
         }
@@ -84,7 +85,7 @@ body {
 
             .profession {
                 box-sizing: border-box;
-                font-size: 1.6rem;
+                font-size: 1.7rem;
                 font-family: monospace;
                 color: var(--text);
                 width: 20ch;
@@ -94,6 +95,7 @@ body {
                 overflow: hidden;
                 border-right: 2px solid var(--text);
             }
+
         }
     }
 }
@@ -118,7 +120,7 @@ body {
         border: 3px solid #2D3250;
         border-radius: 2% 6% 5% 4% / 1% 1% 2% 4%;
         position: relative;
-        
+
         &::before {
             content: '';
             border: 2px solid #2D3250;
@@ -131,7 +133,7 @@ body {
             transform: translate3d(-50%, -50%, 0) scale(1.015) rotate(0.5deg);
             border-radius: 1% 1% 2% 4% / 2% 6% 5% 4%;
         }
-    
+
         p {
             margin-top: 0;
             margin-bottom: 1rem;
@@ -140,7 +142,7 @@ body {
         }
     }
 
-    .btn-dw{
+    .btn-dw {
         padding: 1rem;
 
         .dw-cv {
@@ -153,10 +155,12 @@ body {
             cursor: pointer;
             transition: 0.2s all;
         }
+
         .dw-cv:active {
             transform: scale(0.98);
             box-shadow: 3px 2px 22px 1px rgba(0, 0, 0, 0.24);
         }
+
         .dw-cv:hover {
             color: white;
             background-color: #2D3250;
@@ -269,8 +273,8 @@ body {
     padding: 2rem 5rem;
     text-align: center;
     background-color: #676f8d;
-    
-    .encabezado{
+
+    .encabezado {
         color: #fff;
     }
 
@@ -292,14 +296,14 @@ body {
             padding: 0 1rem;
             align-items: center;
 
-            .icon-canal{
-                i{
+            .icon-canal {
+                i {
                     font-size: 2rem;
                     padding: 0 1rem;
                 }
             }
 
-            h4{
+            h4 {
                 margin: 0;
             }
 
@@ -314,7 +318,6 @@ body {
         }
     }
 }
-
 
 @keyframes profession {
     from {
@@ -373,6 +376,16 @@ body {
         top: 70px;
     }
 
+    .personal{
+        .descripcion{
+            .developer{
+                .profession{
+                    white-space: pre-wrap;
+                }
+            }
+        }
+    }
+
     .resume {
         .page {
             .encabezado {
@@ -395,20 +408,21 @@ body {
         }
     }
 
-    .proyectos{
+    .proyectos {
         .container-project {
             .project {
                 align-items: center;
                 flex-wrap: wrap;
                 flex-direction: column;
                 padding: 0;
-                .idea{
+
+                .idea {
                     width: 100%;
                     margin: 2rem 0;
                 }
             }
-    }
-    
+        }
+
     }
 }
 
@@ -416,7 +430,8 @@ body {
 
     .presentacion,
     .about,
-    .resume, .contact {
+    .resume,
+    .contact {
         padding: 1rem;
         flex-direction: column;
         text-align: center;
@@ -440,7 +455,7 @@ body {
 
     }
 
-    .contenedor-canals{
+    .contenedor-canals {
         flex-direction: column;
     }
 }

@@ -76,7 +76,7 @@ body {
 }
 .personal .descripcion .developer .profession {
   box-sizing: border-box;
-  font-size: 1.6rem;
+  font-size: 1.7rem;
   font-family: monospace;
   color: var(--text);
   width: 20ch;
@@ -311,6 +311,9 @@ body {
     right: 0;
     top: 70px;
   }
+  .personal .descripcion .developer .profession {
+    white-space: pre-wrap;
+  }
   .resume .page .encabezado {
     justify-content: center;
   }
@@ -337,7 +340,8 @@ body {
 @media (max-width: 1000px) {
   .presentacion,
   .about,
-  .resume, .contact {
+  .resume,
+  .contact {
     padding: 1rem;
     flex-direction: column;
     text-align: center;
