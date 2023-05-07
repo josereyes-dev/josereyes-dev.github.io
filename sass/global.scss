@@ -8,23 +8,22 @@ html {
     padding: 0;
     margin: 0;
     font-size: 16px;
-    font-family: 'Poppins', Arial, sans-serif;
+    font-family: 'Raleway';
 }
-a{
+
+a {
     text-decoration: none;
 }
+
 .encabezado {
-    display: flex;
-    justify-content: center;
-    color: #508AA8;
+    text-align: center;
+    color: #F54854;
     font-weight: 800;
     font-size: 40px;
-    padding-top: 20px;
-    margin-bottom: 20px;
+    padding: 1rem 0;
 }
 
 .container-project {
-
     .project {
         padding: 2rem;
         display: flex;
