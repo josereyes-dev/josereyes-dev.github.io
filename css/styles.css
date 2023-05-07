@@ -6,7 +6,8 @@ body {
 .header {
   position: fixed;
   width: 100%;
-  background-color: #2D3250;
+  background-color: #031927;
+  z-index: 2;
 }
 .header .navbar {
   min-height: 70px;
@@ -26,6 +27,7 @@ body {
   justify-content: space-between;
   gap: 60px;
   margin: 0;
+  background-color: #031927;
 }
 .header .navbar .nav-menu .nav-item {
   list-style: none;
@@ -123,7 +125,7 @@ body {
   font-weight: 700;
 }
 .presentacion .btn-dw {
-  padding: 0 1rem;
+  padding: 1rem;
 }
 .presentacion .btn-dw .dw-cv {
   border: none;
@@ -199,7 +201,7 @@ body {
 }
 .proyectos .container-project .project .idea {
   margin: 2rem;
-  width: 25rem;
+  width: 50%;
   cursor: pointer;
   box-shadow: rgba(0, 0, 0, 0.6) 0px 1px 4px;
 }
@@ -321,6 +323,16 @@ body {
   .resume img {
     width: 50%;
   }
+  .proyectos .container-project .project {
+    align-items: center;
+    flex-wrap: wrap;
+    flex-direction: column;
+    padding: 0;
+  }
+  .proyectos .container-project .project .idea {
+    width: 100%;
+    margin: 2rem 0;
+  }
 }
 @media (max-width: 1000px) {
   .presentacion,
@@ -339,14 +351,6 @@ body {
   }
   .about .presentacion .profile {
     padding: 0;
-  }
-  .container-project .project {
-    align-items: center;
-    flex-wrap: wrap;
-    flex-direction: column;
-  }
-  .container-project .project .idea {
-    margin: 2rem;
   }
   .contenedor-canals {
     flex-direction: column;
@@ -381,7 +385,7 @@ a {
   justify-content: space-evenly;
 }
 .container-project .project .idea {
-  background-color: #131316;
+  background-color: #031927;
 }
 
 /*# sourceMappingURL=styles.css.map */
