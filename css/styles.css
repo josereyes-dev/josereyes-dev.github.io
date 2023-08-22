@@ -195,7 +195,27 @@ body {
 .proyectos {
   padding: 1rem 5rem;
 }
+.proyectos .container-project .project {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  grid-column-gap: 20px;
+  grid-row-gap: 0px;
+}
+.proyectos .container-project .project .div1 {
+  grid-area: 1/1/2/2;
+}
+.proyectos .container-project .project .div2 {
+  grid-area: 1/2/2/3;
+}
+.proyectos .container-project .project .div3 {
+  grid-area: 1/3/2/4;
+}
+.proyectos .container-project .project .div4 {
+  grid-area: 2/1/3/2;
+}
 .proyectos .container-project .project .idea {
+  background-color: #031927;
   margin: 2rem;
   width: 100%;
   cursor: pointer;
@@ -377,29 +397,6 @@ a {
   font-weight: 800;
   font-size: 40px;
   padding: 1rem 0;
-}
-
-.container-project .project {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: repeat(2, 1fr);
-  grid-column-gap: 20px;
-  grid-row-gap: 0px;
-}
-.container-project .project .div1 {
-  grid-area: 1/1/2/2;
-}
-.container-project .project .div2 {
-  grid-area: 1/2/2/3;
-}
-.container-project .project .div3 {
-  grid-area: 1/3/2/4;
-}
-.container-project .project .div4 {
-  grid-area: 2/1/3/2;
-}
-.container-project .project .idea {
-  background-color: #031927;
 }
 
 /*# sourceMappingURL=styles.css.map */
