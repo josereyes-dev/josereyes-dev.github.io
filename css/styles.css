@@ -290,6 +290,53 @@ body {
     border-color: transparent;
   }
 }
+@media (max-width: 1000px) {
+  .presentacion,
+  .about,
+  .resume,
+  .contact {
+    padding: 1rem;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+  }
+  .about .presentacion .profile-photo {
+    padding: 1rem;
+  }
+  .about .presentacion .profile-photo img {
+    width: 60%;
+  }
+  .about .presentacion .profile {
+    padding: 0;
+  }
+  .contenedor-canals {
+    flex-direction: column;
+  }
+  .proyectos .container-project .project {
+    padding: 0;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    grid-column-gap: 10px;
+    grid-row-gap: 10px;
+  }
+  .proyectos .container-project .project .div1 {
+    grid-area: 1/1/2/2;
+  }
+  .proyectos .container-project .project .div2 {
+    grid-area: 1/2/2/3;
+  }
+  .proyectos .container-project .project .div3 {
+    grid-area: 2/1/3/2;
+  }
+  .proyectos .container-project .project .div4 {
+    grid-area: 2/2/3/3;
+  }
+  .proyectos .container-project .project .idea {
+    width: 100%;
+    margin: 2rem 0;
+  }
+}
 @media (max-width: 768px) {
   .hamburger {
     display: block;
@@ -342,34 +389,9 @@ body {
   .resume img {
     width: 50%;
   }
-}
-@media (max-width: 1000px) {
-  .presentacion,
-  .about,
-  .resume,
-  .contact {
-    padding: 1rem;
-    flex-direction: column;
-    text-align: center;
-    justify-content: center;
-  }
-  .about .presentacion .profile-photo {
-    padding: 1rem;
-  }
-  .about .presentacion .profile-photo img {
-    width: 60%;
-  }
-  .about .presentacion .profile {
-    padding: 0;
-  }
-  .contenedor-canals {
-    flex-direction: column;
-  }
   .proyectos .container-project .project {
-    padding: 0;
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: repeat(2, 1fr);
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(4, 1fr);
     grid-column-gap: 10px;
     grid-row-gap: 10px;
   }
@@ -377,13 +399,13 @@ body {
     grid-area: 1/1/2/2;
   }
   .proyectos .container-project .project .div2 {
-    grid-area: 1/2/2/3;
-  }
-  .proyectos .container-project .project .div3 {
     grid-area: 2/1/3/2;
   }
+  .proyectos .container-project .project .div3 {
+    grid-area: 3/1/4/2;
+  }
   .proyectos .container-project .project .div4 {
-    grid-area: 2/2/3/3;
+    grid-area: 4/1/5/2;
   }
   .proyectos .container-project .project .idea {
     width: 100%;
