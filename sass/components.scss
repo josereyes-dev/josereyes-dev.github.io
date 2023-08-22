@@ -95,7 +95,6 @@ body {
                 overflow: hidden;
                 border-right: 2px solid var(--text);
             }
-
         }
     }
 }
@@ -229,6 +228,7 @@ body {
     padding: 1rem 5rem;
 
     .container-project {
+    
         .project {
                 display: grid;
                 grid-template-columns: repeat(3, 1fr);
@@ -298,7 +298,6 @@ body {
         display: flex;
         justify-content: center;
         align-items: center;
-
 
         .canals {
             display: flex;
