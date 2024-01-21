@@ -56,19 +56,17 @@ body {
 }
 
 .personal {
+  background: linear-gradient(to bottom, gray 10%, white 40%);
   text-align: center;
   color: #676f8d;
   padding: 90px 25px 25px;
 }
 .personal .descripcion {
-  padding: 25px;
+  padding: 100px;
 }
 .personal .descripcion .name {
-  text-transform: uppercase;
+  font-family: "Playfair Display", serif;
   font-size: 6.5em;
-}
-.personal .descripcion .name br {
-  line-height: 80px;
 }
 .personal .descripcion .developer {
   display: flex;
@@ -89,16 +87,19 @@ body {
 .about {
   padding: 2rem 5rem;
 }
-
-.presentacion {
+.about .presentacion {
   display: flex;
   align-items: center;
 }
-.presentacion .profile-photo img {
-  width: 30vw;
-  padding: 1rem;
+.about .presentacion .profile-photo {
+  padding: 2rem;
 }
-.presentacion .profile {
+.about .presentacion .profile-photo img {
+  width: 30vw;
+  border-radius: 50%;
+  box-shadow: -10px 12px 19px -4px rgba(0, 0, 0, 0.57);
+}
+.about .presentacion .profile {
   text-align: justify;
   padding: 2rem;
   color: rgba(17, 27, 33, 0.7921568627);
@@ -106,7 +107,7 @@ body {
   border-radius: 2% 6% 5% 4%/1% 1% 2% 4%;
   position: relative;
 }
-.presentacion .profile::before {
+.about .presentacion .profile::before {
   content: "";
   border: 2px solid #2D3250;
   display: block;
@@ -118,16 +119,16 @@ body {
   transform: translate3d(-50%, -50%, 0) scale(1.015) rotate(0.5deg);
   border-radius: 1% 1% 2% 4%/2% 6% 5% 4%;
 }
-.presentacion .profile p {
+.about .presentacion .profile p {
   margin-top: 0;
   margin-bottom: 1rem;
   font-size: 20px;
   font-weight: 700;
 }
-.presentacion .btn-dw {
+.about .presentacion .btn-dw {
   padding: 1rem;
 }
-.presentacion .btn-dw .dw-cv {
+.about .presentacion .btn-dw .dw-cv {
   border: none;
   padding: 0 1rem;
   border-radius: 30px;
@@ -137,11 +138,11 @@ body {
   cursor: pointer;
   transition: 0.2s all;
 }
-.presentacion .btn-dw .dw-cv:active {
+.about .presentacion .btn-dw .dw-cv:active {
   transform: scale(0.98);
   box-shadow: 3px 2px 22px 1px rgba(0, 0, 0, 0.24);
 }
-.presentacion .btn-dw .dw-cv:hover {
+.about .presentacion .btn-dw .dw-cv:hover {
   color: white;
   background-color: #2D3250;
 }
@@ -356,6 +357,7 @@ body {
     z-index: 2;
   }
   .nav-menu {
+    padding: 0;
     position: fixed;
     top: -100%;
     left: 0;

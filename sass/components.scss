@@ -63,20 +63,17 @@ body {
 }
 
 .personal {
+    background: linear-gradient(to bottom, gray 10%, white 40%);
     text-align: center;
     color: #676f8d;
     padding: 90px 25px 25px;
 
     .descripcion {
-        padding: 25px;
+        padding: 100px;
 
         .name {
-            text-transform: uppercase;
+            font-family: 'Playfair Display', serif;
             font-size: 6.5em;
-
-            br {
-                line-height: 80px;
-            }
         }
 
         .developer {
@@ -101,17 +98,20 @@ body {
 
 .about {
     padding: 2rem 5rem;
-}
 
 .presentacion {
     display: flex;
     align-items: center;
 
-    .profile-photo img {
-        width: 30vw;
-        padding: 1rem;
-    }
+    .profile-photo{
+        padding: 2rem;
 
+        img {
+            width: 30vw;
+            border-radius: 50%;
+            box-shadow: -10px 12px 19px -4px rgba(0,0,0,0.57);
+        }
+    }
     .profile {
         text-align: justify;
         padding: 2rem;
@@ -165,6 +165,7 @@ body {
             background-color: #2D3250;
         }
     }
+}
 }
 
 .resume {
@@ -365,13 +366,11 @@ body {
                 padding: 0;
             }
         }
-
     }
 
     .contenedor-canals {
         flex-direction: column;
     }
-
     
     .proyectos {
         .container-project {
@@ -421,6 +420,7 @@ body {
     }
 
     .nav-menu {
+        padding: 0;
         position: fixed;
         top: -100%;
         left: 0;
