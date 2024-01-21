@@ -444,8 +444,13 @@ body {
 
     .personal{
         .descripcion{
+            padding: 50px 0;
+            .name{
+                font-size: 4.5em;
+            }
             .developer{
                 .profession{
+                    font-size: 1.5rem;
                     white-space: pre-wrap;
                 }
             }

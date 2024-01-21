@@ -376,7 +376,14 @@ body {
     right: 0;
     top: 70px;
   }
+  .personal .descripcion {
+    padding: 50px 0;
+  }
+  .personal .descripcion .name {
+    font-size: 4.5em;
+  }
   .personal .descripcion .developer .profession {
+    font-size: 1.5rem;
     white-space: pre-wrap;
   }
   .resume .page .encabezado {
