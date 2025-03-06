@@ -69,102 +69,85 @@ body {
     padding: 90px 25px 25px;
 
     .descripcion {
-        padding: 100px;
-
-        .name {
-            font-family: 'Playfair Display', serif;
-            font-size: 6.5em;
+        padding: 50px;
+        display: flex;
+        align-items: center;
+    
+        .profile-photo{
+    
+            img {
+                width: 25vw;
+                border-radius: 40%;
+                box-shadow: 10px 12px -10px -4px rgba(0,0,0,0.57);
+                }
         }
-
+        .desc1{    
+    
         .developer {
-            display: flex;
-            justify-content: center;
+            align-items: center;
+            padding: 1rem 2rem;
+
+            .name {
+                font-family: 'Playfair Display', serif;
+                font-size: 6em;
+                padding: 0 2rem;
+            }
 
             .profession {
+                display: flex;
+                padding: 0 2rem;
                 box-sizing: border-box;
                 font-size: 1.7rem;
                 font-family: monospace;
                 color: var(--text);
-                width: 20ch;
-                animation: profession 5s steps(30),
-                    pampalluga 0.5s step-end infinite alternate;
+                width: 30ch;
+                animation: profession 2s steps(40) forwards;
                 white-space: nowrap;
                 overflow: hidden;
-                border-right: 2px solid var(--text);
+                border-right: 3px solid var(--text);
             }
         }
+        .profile{
+            align-items: center;
+            padding: 0rem 2rem;
+
+            display: flex;
+                text-align: justify;
+                color: #111b21ca;
+                position: relative;
+                
+                p{
+                    padding: 0 2rem;
+                    margin-top: 0;
+                    font-weight: 700;
+                }
     }
-}
-
-.about {
-    padding: 2rem 5rem;
-
-.presentacion {
-    display: flex;
-    align-items: center;
-
-    .profile-photo{
-        padding: 2rem;
-
-        img {
-            width: 30vw;
-            border-radius: 50%;
-            box-shadow: -10px 12px 19px -4px rgba(0,0,0,0.57);
-        }
-    }
-    .profile {
-        text-align: justify;
-        padding: 2rem;
-        color: #111b21ca;
-        border: 3px solid #2D3250;
-        border-radius: 2% 6% 5% 4% / 1% 1% 2% 4%;
-        position: relative;
-
-        &::before {
-            content: '';
-            border: 2px solid #2D3250;
-            display: block;
-            width: 100%;
-            height: 100%;
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate3d(-50%, -50%, 0) scale(1.015) rotate(0.5deg);
-            border-radius: 1% 1% 2% 4% / 2% 6% 5% 4%;
-        }
-
-        p {
-            margin-top: 0;
-            margin-bottom: 1rem;
-            font-size: 20px;
-            font-weight: 700;
-        }
-    }
-
-    .btn-dw {
-        padding: 1rem;
-
-        .dw-cv {
-            border: none;
+    .presentacion {
+        .btn-dw {
             padding: 0 1rem;
-            border-radius: 30px;
-            background-color: #E84855;
-            color: white;
-            box-shadow: 3px 6px 8px rgba(0, 0, 0, 0.3);
-            cursor: pointer;
-            transition: 0.2s all;
+    
+            .dw-cv {
+                border: none;
+                padding: 0 1rem;
+                border-radius: 30px;
+                background-color: #E84855;
+                color: white;
+                cursor: pointer;
+                transition: 0.2s all;
+            }
+    
+            .dw-cv:active {
+                transform: scale(0.98);
+                box-shadow: 3px 2px 22px 1px rgba(0, 0, 0, 0.24);
+            }
+    
+            .dw-cv:hover {
+                color: white;
+                background-color: #2D3250;
+            }
         }
-
-        .dw-cv:active {
-            transform: scale(0.98);
-            box-shadow: 3px 2px 22px 1px rgba(0, 0, 0, 0.24);
-        }
-
-        .dw-cv:hover {
-            color: white;
-            background-color: #2D3250;
-        }
-    }
+    }    
+}
 }
 }
 
@@ -334,7 +317,7 @@ body {
     }
 }
 
-@keyframes pampalluga {
+@keyframes animacion {
     50% {
         border-color: transparent;
     }
