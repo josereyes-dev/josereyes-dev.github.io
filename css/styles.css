@@ -1,6 +1,6 @@
 body {
   margin-top: 0px;
-  background-color: #FFF;
+  background-color: #fff;
 }
 
 .header {
@@ -16,7 +16,7 @@ body {
   padding: 20px 40px;
 }
 .header .navbar .nav-branding {
-  color: #F54854;
+  color: #f54854;
   font-size: 1.5rem;
   font-weight: 700;
   text-transform: uppercase;
@@ -113,7 +113,7 @@ body {
   border: none;
   padding: 0 1rem;
   border-radius: 30px;
-  background-color: #E84855;
+  background-color: #e84855;
   color: white;
   cursor: pointer;
   transition: 0.2s all;
@@ -124,7 +124,7 @@ body {
 }
 .personal .descripcion .desc1 .presentacion .btn-dw .dw-cv:hover {
   color: white;
-  background-color: #2D3250;
+  background-color: #2d3250;
 }
 
 .resume {
@@ -234,7 +234,7 @@ body {
   font-size: 1.2rem;
   line-height: 32px;
   font-weight: 400;
-  color: #FFF;
+  color: #fff;
 }
 .contact .contenedor-canals {
   display: flex;
@@ -254,11 +254,11 @@ body {
   margin: 0;
 }
 .contact .contenedor-canals .canals a {
-  color: #FFF;
+  color: #fff;
   transition: 0.7s ease;
 }
 .contact .contenedor-canals .canals a:hover {
-  color: #FFB17A;
+  color: #ffb17a;
 }
 
 @keyframes profession {
@@ -272,6 +272,21 @@ body {
   }
 }
 @media (max-width: 1000px) {
+  .personal .descripcion {
+    flex-direction: column;
+    padding: 50px 0;
+  }
+  .personal .descripcion .profile-photo img {
+    width: 20rem;
+  }
+  .personal .descripcion .desc1 .developer .name {
+    font-size: 4, 3rem;
+  }
+  .personal .descripcion .desc1 .developer .profession {
+    font-size: 1.5rem;
+    white-space: pre-wrap;
+    display: flex;
+  }
   .presentacion,
   .about,
   .resume,
@@ -357,14 +372,19 @@ body {
     top: 70px;
   }
   .personal .descripcion {
+    flex-direction: column;
     padding: 50px 0;
   }
-  .personal .descripcion .name {
-    font-size: 4.5em;
+  .personal .descripcion .profile-photo img {
+    width: 20rem;
   }
-  .personal .descripcion .developer .profession {
+  .personal .descripcion .desc1 .developer .name {
+    font-size: 4, 3rem;
+  }
+  .personal .descripcion .desc1 .developer .profession {
     font-size: 1.5rem;
     white-space: pre-wrap;
+    display: flex;
   }
   .resume .page .encabezado {
     justify-content: center;
