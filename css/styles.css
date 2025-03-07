@@ -284,8 +284,10 @@ body {
   }
   .personal .descripcion .desc1 .developer .profession {
     font-size: 1.5rem;
+    justify-content: center;
     white-space: pre-wrap;
     display: flex;
+    animation: none;
   }
   .presentacion,
   .about,
@@ -376,15 +378,24 @@ body {
     padding: 50px 0;
   }
   .personal .descripcion .profile-photo img {
-    width: 20rem;
+    width: 12rem;
+  }
+  .personal .descripcion .desc1 .developer {
+    padding: 0;
   }
   .personal .descripcion .desc1 .developer .name {
-    font-size: 4, 3rem;
+    font-size: 2rem;
+    padding: 2rem 0;
   }
   .personal .descripcion .desc1 .developer .profession {
     font-size: 1.5rem;
+    justify-content: center;
     white-space: pre-wrap;
     display: flex;
+    animation: none;
+  }
+  .personal .descripcion .desc1 .profile {
+    font-size: 1.5rem;
   }
   .resume .page .encabezado {
     justify-content: center;

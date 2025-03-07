@@ -344,9 +344,11 @@ body {
               }
               .profession {
                 font-size: 1.5rem;
+                justify-content: center;
                 white-space: pre-wrap;
                 display: flex;
-              }
+                animation: none;
+                  }
             }
           }
         }
@@ -466,19 +468,26 @@ body {
       padding: 50px 0;
       .profile-photo{
         img{
-            width: 20rem;
+            width: 12rem;
         }
       }
       .desc1 {
         .developer {
+            padding: 0;
           .name {
-            font-size: 4, 3rem;
+            font-size: 2rem;
+            padding: 2rem 0;
           }
           .profession {
             font-size: 1.5rem;
+            justify-content: center;
             white-space: pre-wrap;
             display: flex;
+            animation: none;
           }
+        }
+        .profile{
+            font-size: 1.5rem;
         }
       }
     }
