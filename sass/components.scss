@@ -92,16 +92,16 @@ body {
         }
       }
       .profession {
-        p{
-            font-size: 1.7rem;
-            font-family: monospace;
-            color: var(--text);
-            width: 50ch;
-            animation: profession 1.5s steps(50) forwards;
-            white-space: nowrap;
-            overflow: hidden;
-            border-right: 3px solid var(--text);    
-            box-sizing: border-box;
+        p {
+          font-size: 1.7rem;
+          font-family: monospace;
+          color: var(--text);
+          width: 50ch;
+          animation: profession 1.5s steps(50) forwards;
+          white-space: nowrap;
+          overflow: hidden;
+          border-right: 3px solid var(--text);
+          box-sizing: border-box;
         }
       }
 
@@ -321,34 +321,33 @@ body {
   }
 }
 
-
 @media (max-width: 1000px) {
-    .personal {
-        .descripcion {
-          flex-direction: column;
-          padding: 50px 0 0 0;
-          .profile-photo{
-            img{
-                width: 20rem;
-            }
+  .personal {
+    .descripcion {
+      flex-direction: column;
+      padding: 50px 0 0 0;
+      .profile-photo {
+        img {
+          width: 20rem;
+        }
+      }
+      .desc1 {
+        .developer {
+          .name {
+            font-size: 4, 3rem;
           }
-          .desc1 {
-            .developer {
-              .name {
-                font-size: 4, 3rem;
-              }
-            }
-            .profession {
-                font-size: 1.5rem;
-                p{
-                    animation: none;
-                    width: auto;
-                }
-            }
+        }
+        .profession {
+          font-size: 1.5rem;
+          p {
+            animation: none;
+            width: auto;
           }
         }
       }
-    
+    }
+  }
+
   .presentacion,
   .about,
   .resume,
@@ -358,7 +357,6 @@ body {
     text-align: center;
     justify-content: center;
   }
-
 
   .contenedor-canals {
     flex-direction: column;
@@ -443,32 +441,32 @@ body {
   }
 
   .personal {
+    padding: 50px 0 0 0;
     .descripcion {
       flex-direction: column;
-      padding: 50px 0 0 0;
-      .profile-photo{
-        img{
-            width: 12rem;
+      .profile-photo {
+        img {
+          width: 12rem;
         }
       }
       .desc1 {
         .developer {
-            padding: 0;
+          padding: 0;
           .name {
             font-size: 2rem;
             padding: 1rem 0;
           }
         }
         .profession {
-            font-size: 1.5rem;
-            justify-content: center;
-            white-space: pre-wrap;
-            display: flex;
-            animation: none;
-          }
+          font-size: 1.5rem;
+          justify-content: center;
+          white-space: pre-wrap;
+          display: flex;
+          animation: none;
+        }
 
-        .profile{
-            font-size: 1.5rem;
+        .profile {
+          font-size: 1.5rem;
         }
       }
     }

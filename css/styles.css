@@ -357,9 +357,11 @@ body {
     right: 0;
     top: 70px;
   }
+  .personal {
+    padding: 50px 0 0 0;
+  }
   .personal .descripcion {
     flex-direction: column;
-    padding: 50px 0 0 0;
   }
   .personal .descripcion .profile-photo img {
     width: 12rem;
