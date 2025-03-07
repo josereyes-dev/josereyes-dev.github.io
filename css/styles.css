@@ -80,18 +80,16 @@ body {
   font-size: 6em;
   padding: 0 2rem;
 }
-.personal .descripcion .desc1 .developer .profession {
-  display: flex;
-  padding: 0 2rem;
-  box-sizing: border-box;
+.personal .descripcion .desc1 .profession p {
   font-size: 1.7rem;
   font-family: monospace;
   color: var(--text);
-  width: 30ch;
-  animation: profession 2s steps(40) forwards;
+  width: 50ch;
+  animation: profession 1.5s steps(50) forwards;
   white-space: nowrap;
   overflow: hidden;
   border-right: 3px solid var(--text);
+  box-sizing: border-box;
 }
 .personal .descripcion .desc1 .profile {
   align-items: center;
@@ -263,18 +261,13 @@ body {
 
 @keyframes profession {
   from {
-    width: 0;
-  }
-}
-@keyframes animacion {
-  50% {
-    border-color: transparent;
+    width: 70%;
   }
 }
 @media (max-width: 1000px) {
   .personal .descripcion {
     flex-direction: column;
-    padding: 50px 0;
+    padding: 50px 0 0 0;
   }
   .personal .descripcion .profile-photo img {
     width: 20rem;
@@ -282,12 +275,12 @@ body {
   .personal .descripcion .desc1 .developer .name {
     font-size: 4, 3rem;
   }
-  .personal .descripcion .desc1 .developer .profession {
+  .personal .descripcion .desc1 .profession {
     font-size: 1.5rem;
-    justify-content: center;
-    white-space: pre-wrap;
-    display: flex;
+  }
+  .personal .descripcion .desc1 .profession p {
     animation: none;
+    width: auto;
   }
   .presentacion,
   .about,
@@ -297,15 +290,6 @@ body {
     flex-direction: column;
     text-align: center;
     justify-content: center;
-  }
-  .about .presentacion .profile-photo {
-    padding: 1rem;
-  }
-  .about .presentacion .profile-photo img {
-    width: 60%;
-  }
-  .about .presentacion .profile {
-    padding: 0;
   }
   .contenedor-canals {
     flex-direction: column;
@@ -375,7 +359,7 @@ body {
   }
   .personal .descripcion {
     flex-direction: column;
-    padding: 50px 0;
+    padding: 50px 0 0 0;
   }
   .personal .descripcion .profile-photo img {
     width: 12rem;
@@ -385,9 +369,9 @@ body {
   }
   .personal .descripcion .desc1 .developer .name {
     font-size: 2rem;
-    padding: 2rem 0;
+    padding: 1rem 0;
   }
-  .personal .descripcion .desc1 .developer .profession {
+  .personal .descripcion .desc1 .profession {
     font-size: 1.5rem;
     justify-content: center;
     white-space: pre-wrap;

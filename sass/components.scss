@@ -90,21 +90,21 @@ body {
           font-size: 6em;
           padding: 0 2rem;
         }
-
-        .profession {
-          display: flex;
-          padding: 0 2rem;
-          box-sizing: border-box;
-          font-size: 1.7rem;
-          font-family: monospace;
-          color: var(--text);
-          width: 30ch;
-          animation: profession 2s steps(40) forwards;
-          white-space: nowrap;
-          overflow: hidden;
-          border-right: 3px solid var(--text);
+      }
+      .profession {
+        p{
+            font-size: 1.7rem;
+            font-family: monospace;
+            color: var(--text);
+            width: 50ch;
+            animation: profession 1.5s steps(50) forwards;
+            white-space: nowrap;
+            overflow: hidden;
+            border-right: 3px solid var(--text);    
+            box-sizing: border-box;
         }
       }
+
       .profile {
         align-items: center;
         padding: 0rem 2rem;
@@ -317,21 +317,16 @@ body {
 
 @keyframes profession {
   from {
-    width: 0;
+    width: 70%;
   }
 }
 
-@keyframes animacion {
-  50% {
-    border-color: transparent;
-  }
-}
 
 @media (max-width: 1000px) {
     .personal {
         .descripcion {
           flex-direction: column;
-          padding: 50px 0;
+          padding: 50px 0 0 0;
           .profile-photo{
             img{
                 width: 20rem;
@@ -342,13 +337,13 @@ body {
               .name {
                 font-size: 4, 3rem;
               }
-              .profession {
+            }
+            .profession {
                 font-size: 1.5rem;
-                justify-content: center;
-                white-space: pre-wrap;
-                display: flex;
-                animation: none;
-                  }
+                p{
+                    animation: none;
+                    width: auto;
+                }
             }
           }
         }
@@ -364,21 +359,6 @@ body {
     justify-content: center;
   }
 
-  .about {
-    .presentacion {
-      .profile-photo {
-        padding: 1rem;
-
-        img {
-          width: 60%;
-        }
-      }
-
-      .profile {
-        padding: 0;
-      }
-    }
-  }
 
   .contenedor-canals {
     flex-direction: column;
@@ -465,7 +445,7 @@ body {
   .personal {
     .descripcion {
       flex-direction: column;
-      padding: 50px 0;
+      padding: 50px 0 0 0;
       .profile-photo{
         img{
             width: 12rem;
@@ -476,16 +456,17 @@ body {
             padding: 0;
           .name {
             font-size: 2rem;
-            padding: 2rem 0;
+            padding: 1rem 0;
           }
-          .profession {
+        }
+        .profession {
             font-size: 1.5rem;
             justify-content: center;
             white-space: pre-wrap;
             display: flex;
             animation: none;
           }
-        }
+
         .profile{
             font-size: 1.5rem;
         }
