@@ -518,6 +518,16 @@ body {
         .idea {
           width: 100%;
           margin: 2rem 0;
+          
+          figure{
+            height: calc(260px / 1.91);
+                transition: transform 0.5s;
+
+            &:hover{
+                transform: scale(1.05);
+                transition: transform 0.3s;
+            }
+          }
         }
       }
     }
