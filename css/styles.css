@@ -1,3 +1,4 @@
+@charset "UTF-8";
 body {
   margin-top: 0px;
   background-color: #fff;
@@ -125,21 +126,85 @@ body {
   background-color: #2d3250;
 }
 
-.resume {
+.resume-wrapper {
+  display: flex;
+  width: 100%;
   padding: 2rem 5rem;
 }
-.resume .page {
-  border-radius: 10px;
-  background: #fff;
-  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+.resume-wrapper .resume-menu {
+  position: sticky;
+  top: 180px;
+  width: 280px;
+  padding: 3rem 5rem;
+  margin: 0;
+  align-self: flex-start;
 }
-.resume .page p {
+.resume-wrapper .resume-menu ul {
+  list-style: none;
+}
+.resume-wrapper .resume-menu li {
+  position: relative;
+  margin-bottom: 20px;
+  padding-left: 20px;
+  cursor: pointer;
+  font-size: 20px;
+  font-weight: 700;
+  color: #000;
+  transition: color 0.2s ease;
+}
+.resume-wrapper .resume-menu li::before {
+  content: "—";
+  position: absolute;
+  left: 0;
+  color: #e60000;
+  opacity: 0;
+  transition: opacity 0.2s ease;
+}
+.resume-wrapper .resume-menu li.active {
+  color: #e60000;
+  font-weight: 700;
+  margin-left: 20px;
+  transition: 0.2s all ease;
+}
+.resume-wrapper .resume-menu li.active::before {
+  opacity: 1;
+}
+.resume-wrapper .resume-content {
+  flex: 1;
+  padding: 50px 60px;
+  scroll-behavior: smooth;
+}
+.resume-wrapper .resume-content .resume-block {
+  min-height: 70vh;
+  margin: 20px;
+  padding: 20px;
+}
+.resume-wrapper .resume-content .resume-block h2 {
+  color: #e60000;
+  font-size: 28px;
+  font-weight: 700;
+  margin-bottom: 15px;
+}
+.resume-wrapper .resume-content .resume-block h3 {
+  color: #031927;
+  font-weight: 700;
+}
+.resume-wrapper .resume-content .resume-block .date {
+  color: #e60000;
+}
+.resume-wrapper .resume-content .resume-block p {
   font-size: 16px;
-  line-height: 32px;
-  font-weight: 400;
-  color: #414141;
+  line-height: 1.7;
+  color: #777;
+  max-width: 720px;
+  margin-bottom: 12px;
 }
-.resume .page .front .lenguajes {
+.resume-wrapper .resume-content .resume-block li {
+  font-size: 16px;
+  color: #777;
+  margin-bottom: 6px;
+}
+.resume-wrapper .resume-content .front .lenguajes {
   justify-content: center;
   display: flex;
   flex-wrap: wrap;
@@ -147,83 +212,35 @@ body {
   padding: 1rem;
   gap: 2rem;
 }
-.resume .page .front .lenguajes .lenguaje {
-  background-color: #031927;
-  color: #fff;
+.resume-wrapper .resume-content .front .lenguajes .lenguaje {
+  background-color: #fff;
+  color: #000;
   border-radius: 0.5rem;
   justify-content: center;
   align-items: center;
   text-align: center;
   width: 200px;
   cursor: pointer;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
 }
-.resume .page .front .lenguajes .lenguaje .content-img {
+.resume-wrapper .resume-content .front .lenguajes .lenguaje .content-img {
   padding: 1rem 0;
 }
-.resume .page .front .lenguajes .lenguaje .content-title {
+.resume-wrapper .resume-content .front .lenguajes .lenguaje .content-title {
   padding: 0 1rem;
 }
-.resume .page .front .lenguajes .lenguaje .content-name {
+.resume-wrapper .resume-content .front .lenguajes .lenguaje .content-name {
   padding: 0 0 1rem 0;
 }
-.resume .page .front .lenguajes .lenguaje p {
-  color: #fff;
+.resume-wrapper .resume-content .front .lenguajes .lenguaje p {
+  color: #000;
   margin: 0;
-}
-
-.proyectos {
-  padding: 1rem 5rem;
-}
-.proyectos .container-project .project {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: repeat(2, 1fr);
-  grid-column-gap: 20px;
-  grid-row-gap: 0px;
-}
-.proyectos .container-project .project .div1 {
-  grid-area: 1/1/2/2;
-}
-.proyectos .container-project .project .div2 {
-  grid-area: 1/2/2/3;
-}
-.proyectos .container-project .project .div3 {
-  grid-area: 1/3/2/4;
-}
-.proyectos .container-project .project .div4 {
-  grid-area: 2/1/3/2;
-}
-.proyectos .container-project .project .idea {
-  background-color: #031927;
-  margin: 2rem;
-  width: 100%;
-  cursor: pointer;
-  box-shadow: rgba(0, 0, 0, 0.6) 0px 1px 4px;
-}
-.proyectos .container-project .project .idea figure .principal {
-  width: 100%;
-}
-.proyectos .container-project .project .idea .info-project {
-  padding: 1rem;
-}
-.proyectos .container-project .project .idea .info-project h2 {
-  color: white;
-  font-size: 1.5rem;
-  padding: 0;
-}
-.proyectos .container-project .project .idea .info-project p {
-  color: white;
-}
-.proyectos .container-project .project .idea .info-project .programas {
-  display: flex;
-  justify-content: space-between;
-  padding: 0;
 }
 
 .contact {
   padding: 2rem 5rem;
   text-align: center;
-  background-color: #676f8d;
+  background-color: #031927;
 }
 .contact .encabezado {
   color: #fff;
@@ -247,6 +264,7 @@ body {
 .contact .contenedor-canals .canals .icon-canal i {
   font-size: 2rem;
   padding: 0 1rem;
+  color: #fff;
 }
 .contact .contenedor-canals .canals h4 {
   margin: 0;
@@ -266,7 +284,6 @@ body {
 }
 @media (max-width: 1000px) {
   .personal .descripcion {
-    flex-direction: column;
     padding: 50px 0 0 0;
   }
   .personal .descripcion .profile-photo img {
@@ -282,9 +299,15 @@ body {
     animation: none;
     width: auto;
   }
+  .personal .descripcion .resume-wrapper {
+    padding: 1rem;
+    flex-direction: column;
+    align-items: stretch;
+    text-align: left;
+  }
   .presentacion,
   .about,
-  .resume,
+  .resume-wrapper,
   .contact {
     padding: 1rem;
     flex-direction: column;
@@ -293,30 +316,6 @@ body {
   }
   .contenedor-canals {
     flex-direction: column;
-  }
-  .proyectos .container-project .project {
-    padding: 0;
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: repeat(2, 1fr);
-    grid-column-gap: 10px;
-    grid-row-gap: 10px;
-  }
-  .proyectos .container-project .project .div1 {
-    grid-area: 1/1/2/2;
-  }
-  .proyectos .container-project .project .div2 {
-    grid-area: 1/2/2/3;
-  }
-  .proyectos .container-project .project .div3 {
-    grid-area: 2/1/3/2;
-  }
-  .proyectos .container-project .project .div4 {
-    grid-area: 2/2/3/3;
-  }
-  .proyectos .container-project .project .idea {
-    width: 100%;
-    margin: 2rem 0;
   }
 }
 @media (max-width: 768px) {
@@ -383,47 +382,58 @@ body {
   .personal .descripcion .desc1 .profile {
     font-size: 1.5rem;
   }
-  .resume .page .encabezado {
+  .resume-wrapper {
+    display: flex;
+    align-items: flex-start;
+  }
+  .resume-wrapper .resume-menu {
+    position: static;
+    top: auto;
+    width: 100%;
+    padding: 1rem;
+    text-align: left;
+    margin-left: 0;
+  }
+  .resume-wrapper .resume-menu ul {
+    margin: 0;
+    padding: 0;
+    align-items: flex-start;
+  }
+  .resume-wrapper .resume-menu li {
+    padding-left: 0;
+    margin-right: 0;
+    text-align: left;
+  }
+  .resume-wrapper .resume-menu li::before {
+    display: none;
+  }
+  .resume-wrapper .resume-menu li.active {
+    color: #e60000;
+    font-weight: 700;
+    margin-left: 0;
+  }
+  .resume-wrapper .resume-content {
+    padding: 0;
+    text-align: left;
+  }
+  .resume-wrapper .resume-content .resume-block {
+    padding: 1rem;
+    margin: 0;
+    min-height: auto;
+    justify-content: left;
+    font-size: 20px;
+  }
+  .resume-wrapper .resume-content .front {
+    padding: 1rem;
+  }
+  .resume-wrapper .resume-content .front .lenguajes {
     justify-content: center;
   }
-  .resume .page .front .lenguajes {
-    justify-content: center;
-  }
-  .resume .page .front .lenguajes .lenguaje {
+  .resume-wrapper .resume-content .front .lenguajes .lenguaje {
     width: 40%;
   }
-  .resume img {
+  img {
     width: 50%;
-  }
-  .proyectos .container-project .project {
-    grid-template-columns: 1fr;
-    grid-template-rows: repeat(4, 1fr);
-    grid-column-gap: 10px;
-    grid-row-gap: 10px;
-  }
-  .proyectos .container-project .project .div1 {
-    grid-area: 1/1/2/2;
-  }
-  .proyectos .container-project .project .div2 {
-    grid-area: 2/1/3/2;
-  }
-  .proyectos .container-project .project .div3 {
-    grid-area: 3/1/4/2;
-  }
-  .proyectos .container-project .project .div4 {
-    grid-area: 4/1/5/2;
-  }
-  .proyectos .container-project .project .idea {
-    width: 100%;
-    margin: 2rem 0;
-  }
-  .proyectos .container-project .project .idea figure {
-    height: 136.1256544503px;
-    transition: transform 0.5s;
-  }
-  .proyectos .container-project .project .idea figure:hover {
-    transform: scale(1.05);
-    transition: transform 0.3s;
   }
 }
 html {
