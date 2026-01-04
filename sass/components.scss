@@ -80,6 +80,7 @@ body {
         box-shadow: 10px 12px -10px -4px rgba(0, 0, 0, 0.57);
       }
     }
+
     .desc1 {
       .developer {
         align-items: center;
@@ -91,6 +92,7 @@ body {
           padding: 0 2rem;
         }
       }
+
       .profession {
         p {
           font-size: 1.7rem;
@@ -120,6 +122,7 @@ body {
           font-weight: 700;
         }
       }
+
       .presentacion {
         .btn-dw {
           padding: 0 1rem;
@@ -149,19 +152,94 @@ body {
   }
 }
 
-.resume {
+.resume-wrapper {
+  display: flex;
+  width: 100%;
   padding: 2rem 5rem;
 
-  .page {
-    border-radius: 10px;
-    background: #fff;
-    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+  .resume-menu {
+    position: sticky;
+    top: 180px;
+    width: 280px;
+    padding: 3rem 5rem;
+    margin: 0;
+    align-self: flex-start;
 
-    p {
-      font-size: 16px;
-      line-height: 32px;
-      font-weight: 400;
-      color: #414141;
+    ul {
+      list-style: none;
+    }
+
+    li {
+      position: relative;
+      margin-bottom: 20px;
+      padding-left: 20px;
+      cursor: pointer;
+      font-size: 20px;
+      font-weight: 700;
+      color: #000;
+      transition: color 0.2s ease;
+    }
+
+    li::before {
+      content: "—";
+      position: absolute;
+      left: 0;
+      color: #e60000;
+      opacity: 0;
+      transition: opacity 0.2s ease;
+    }
+
+    li.active {
+      color: #e60000;
+      font-weight: 700;
+      margin-left: 20px;
+      transition: 0.2s all ease;
+    }
+
+    li.active::before {
+      opacity: 1;
+    }
+  }
+
+  .resume-content {
+    flex: 1;
+    padding: 50px 60px;
+    scroll-behavior: smooth;
+
+    .resume-block {
+      min-height: 70vh;
+      margin: 20px;
+      padding: 20px;
+
+      h2 {
+        color: #e60000;
+        font-size: 28px;
+        font-weight: 700;
+        margin-bottom: 15px;
+      }
+
+      h3 {
+        color: #031927;
+        font-weight: 700;
+      }
+
+      .date {
+        color: #e60000
+      }
+
+      p {
+        font-size: 16px;
+        line-height: 1.7;
+        color: #777;
+        max-width: 720px;
+        margin-bottom: 12px;
+      }
+
+      li {
+        font-size: 16px;
+        color: #777;
+        margin-bottom: 6px;
+      }
     }
 
     .front {
@@ -174,14 +252,16 @@ body {
         gap: 2rem;
 
         .lenguaje {
-          background-color: #031927;
-          color: #fff;
+          background-color: #fff;
+          color: #000;
           border-radius: 0.5rem;
           justify-content: center;
           align-items: center;
           text-align: center;
           width: 200px;
           cursor: pointer;
+
+          box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
 
           .content-img {
             padding: 1rem 0;
@@ -196,69 +276,8 @@ body {
           }
 
           p {
-            color: #fff;
+            color: #000;
             margin: 0;
-          }
-        }
-      }
-    }
-  }
-}
-
-.proyectos {
-  padding: 1rem 5rem;
-
-  .container-project {
-    .project {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      grid-template-rows: repeat(2, 1fr);
-      grid-column-gap: 20px;
-      grid-row-gap: 0px;
-
-      .div1 {
-        grid-area: 1 / 1 / 2 / 2;
-      }
-      .div2 {
-        grid-area: 1 / 2 / 2 / 3;
-      }
-      .div3 {
-        grid-area: 1 / 3 / 2 / 4;
-      }
-      .div4 {
-        grid-area: 2 / 1 / 3 / 2;
-      }
-
-      .idea {
-        background-color: #031927;
-        margin: 2rem;
-        width: 100%;
-        cursor: pointer;
-        box-shadow: rgba(0, 0, 0, 0.6) 0px 1px 4px;
-
-        figure {
-          .principal {
-            width: 100%;
-          }
-        }
-
-        .info-project {
-          padding: 1rem;
-
-          h2 {
-            color: white;
-            font-size: 1.5rem;
-            padding: 0;
-          }
-
-          p {
-            color: white;
-          }
-
-          .programas {
-            display: flex;
-            justify-content: space-between;
-            padding: 0;
           }
         }
       }
@@ -269,7 +288,7 @@ body {
 .contact {
   padding: 2rem 5rem;
   text-align: center;
-  background-color: #676f8d;
+  background-color: #031927;
 
   .encabezado {
     color: #fff;
@@ -296,6 +315,7 @@ body {
         i {
           font-size: 2rem;
           padding: 0 1rem;
+          color: #fff
         }
       }
 
@@ -324,33 +344,44 @@ body {
 @media (max-width: 1000px) {
   .personal {
     .descripcion {
-      flex-direction: column;
       padding: 50px 0 0 0;
+
       .profile-photo {
         img {
           width: 20rem;
         }
       }
+
       .desc1 {
         .developer {
           .name {
             font-size: 4, 3rem;
           }
         }
+
         .profession {
           font-size: 1.5rem;
+
           p {
             animation: none;
             width: auto;
           }
         }
       }
+
+      .resume-wrapper {
+        padding: 1rem;
+        flex-direction: column;
+        align-items: stretch;
+        text-align: left;
+
+      }
     }
   }
 
   .presentacion,
   .about,
-  .resume,
+  .resume-wrapper,
   .contact {
     padding: 1rem;
     flex-direction: column;
@@ -361,38 +392,8 @@ body {
   .contenedor-canals {
     flex-direction: column;
   }
-
-  .proyectos {
-    .container-project {
-      .project {
-        padding: 0;
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        grid-template-rows: repeat(2, 1fr);
-        grid-column-gap: 10px;
-        grid-row-gap: 10px;
-
-        .div1 {
-          grid-area: 1 / 1 / 2 / 2;
-        }
-        .div2 {
-          grid-area: 1 / 2 / 2 / 3;
-        }
-        .div3 {
-          grid-area: 2 / 1 / 3 / 2;
-        }
-        .div4 {
-          grid-area: 2 / 2 / 3 / 3;
-        }
-
-        .idea {
-          width: 100%;
-          margin: 2rem 0;
-        }
-      }
-    }
-  }
 }
+
 
 @media (max-width: 768px) {
   .hamburger {
@@ -442,21 +443,26 @@ body {
 
   .personal {
     padding: 50px 0 0 0;
+
     .descripcion {
       flex-direction: column;
+
       .profile-photo {
         img {
           width: 12rem;
         }
       }
+
       .desc1 {
         .developer {
           padding: 0;
+
           .name {
             font-size: 3rem;
             padding: 1rem 0;
           }
         }
+
         .profession {
           font-size: 1.5rem;
           justify-content: center;
@@ -472,64 +478,67 @@ body {
     }
   }
 
-  .resume {
-    .page {
-      .encabezado {
+  .resume-wrapper {
+    display: flex;
+    align-items: flex-start;
+
+    .resume-menu {
+      position: static; // ⬅️ clave
+      top: auto;
+      width: 100%;
+      padding: 1rem;
+      text-align: left;
+      margin-left: 0;
+
+      ul {
+        margin: 0;
+        padding: 0;
+        align-items: flex-start;
+      }
+
+      li {
+        padding-left: 0;
+        margin-right: 0;
+        text-align: left;
+      }
+
+      li::before {
+        display: none;
+      }
+
+      li.active {
+        color: #e60000;
+        font-weight: 700;
+        margin-left: 0;
+
+      }
+    }
+
+    .resume-content {
+      padding: 0;
+      text-align: left;
+
+      .resume-block {
+        padding: 1rem;
+        margin: 0;
+        min-height: auto;
+        justify-content: left;
+        font-size: 20px;
+
+      }
+
+    .front {
+      padding: 1rem;
+      .lenguajes {
         justify-content: center;
-      }
-
-      .front {
-        .lenguajes {
-          justify-content: center;
-
-          .lenguaje {
-            width: 40%;
-          }
+        .lenguaje {
+          width: 40%;
         }
       }
     }
+  }}
 
-    img {
-      width: 50%;
-    }
-  }
-
-  .proyectos {
-    .container-project {
-      .project {
-        grid-template-columns: 1fr;
-        grid-template-rows: repeat(4, 1fr);
-        grid-column-gap: 10px;
-        grid-row-gap: 10px;
-
-        .div1 {
-          grid-area: 1 / 1 / 2 / 2;
-        }
-        .div2 {
-          grid-area: 2 / 1 / 3 / 2;
-        }
-        .div3 {
-          grid-area: 3 / 1 / 4 / 2;
-        }
-        .div4 {
-          grid-area: 4 / 1 / 5 / 2;
-        }
-
-        .idea {
-          width: 100%;
-          margin: 2rem 0;
-          
-          figure{
-            height: calc(260px / 1.91);
-                transition: transform 0.5s;
-
-            &:hover{
-                transform: scale(1.05);
-                transition: transform 0.3s;
-            }
-          }
-        }
-      }
-    }
+  img {
+    width: 50%;
   }
 }
